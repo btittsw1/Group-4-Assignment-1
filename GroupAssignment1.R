@@ -10,7 +10,7 @@ ui <- fluidPage(
   ),
   plotOutput("time.plot"),
 
-  selectInput("selected_purpose", label = h3("Select Purpose"),
+  selectInput("selected_purpose", label = h3("Select purpose"),
               choices = list("Business" , "Holiday" , "Other" ),
               selected = 1),
 )
