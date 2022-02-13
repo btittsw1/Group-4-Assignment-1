@@ -4,7 +4,7 @@ data("tourism")
 
 ui <- fluidPage(
   selectInput(
-    inputId = "selected_region",
+    inputId = strong("selected_region"),
     label = "Select Region",
     choices = unique(tourism$Region)
   ),
@@ -20,6 +20,7 @@ server <- function(input, output, session) {
     tourism.region <- tourism[tourism$Region == input$selected_region, ]
     tourism.purpose <- tourism.region[tourism.region$Purpose == input$selected_purpose, ]
     autoplot(tourism.purpose)
+
 
   })
 
