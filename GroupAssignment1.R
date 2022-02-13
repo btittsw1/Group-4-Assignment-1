@@ -4,13 +4,13 @@ data("tourism")
 
 ui <- fluidPage(
   selectInput(
-    inputId = strong("selected_region"),
+    inputId = "selected_region",
     label = "Select Region",
     choices = unique(tourism$Region)
   ),
   plotOutput("time.plot"),
 
-  selectInput("selected_purpose", label = h3("Select box"),
+  selectInput("selected_purpose", label = h3("Select purpose"),
               choices = list("Business" , "Holiday" , "Other" ),
               selected = 1),
 )
